@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Resume</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="assests/logo.png"
+          alt=""
+          style="width: 60px; height: 50px"
+        />Resume Builder
+      </div>
+    </header>
+    <section class="resume-form">
+      <div class="form-container">
+        <form id="multiStepForm">
+          <div class="form-step" id="step-1">
+            <h2>Personal Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <label for="mobile">Phone Number:</label>
+            <input type="number" id="mobile" required />
+            <label for="linkedIn">LinkedIn Link:</label>
+            <input type="text" id="linkedIn" required />
+            <label for="github">GitHub Link:</label>
+            <input type="text" id="github" required />
+
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="form-step" id="step-2">
+            <h2>Objective</h2>
+            <label for="objective">Objective:</label>
+            <textarea id="objective" required></textarea>
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="form-step" id="step-3">
+            <h2>Education</h2>
+            <div id="education-section"></div>
+            <button type="button" id="add-education">+</button>
+
+            <button type="button" class="prev-btn">Previous</button>
+
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="form-step" id="step-4">
+            <h2>Skills</h2>
+            <div id="skills-section"></div>
+            <button type="button" id="add-skill">+</button>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="form-step" id="step-5">
+            <h2>Projects</h2>
+            <div id="projects-section"></div>
+            <button type="button" id="add-project">+</button>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="save">Save</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="resume">
+      <div class="form-container">
+        <div class="contactF">
+          <h1 class="nameField"></h1>
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <span class="phone"></span>
+            <i class="fa-solid fa-envelope"></i>
+            <span class="emailField"></span>
+            <i class="fa-brands fa-linkedin"></i>
+            <span class="linkedIn"></span>
+            <i class="fa-brands fa-github"></i>
+            <span class="github"></span>
+          </div>
+        </div>
+        <hr />
+        <div class="objF">
+          <h1>Objective</h1>
+          <hr />
+          <p class="objField"></p>
+        </div>
+        <div class="projectF">
+          <h1>Projects</h1>
+          <hr />
+          <div class="proField"></div>
+        </div>
+        <div class="education">
+          <h1>Education</h1>
+          <hr />
+          <div class="eduField"></div>
+        </div>
+        <div class="skills">
+          <h1>Skills</h1>
+          <hr />
+          <div class="skillField"></div>
+        </div>
+      </div>
+    </section>
+    <div class="down-btn">
+      <button class="download">Download</button>
+      <button class="edit">Edit</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
